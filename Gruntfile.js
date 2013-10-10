@@ -231,7 +231,7 @@ module.exports = function (grunt) {
                     src: [
                         '.htaccess',
                         'empty.html',
-                        'preview_export/shapes/**',
+                        'preview_export/css/**',
                         'zip/**'
                     ]
                 },
