@@ -232,6 +232,9 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'empty.html',
                         'preview_export/css/**',
+                        '!**/league_gothic_license',
+                        '!**/*.ttf',
+                        '!**/*.eot',
                         'zip/**'
                     ]
                 },
