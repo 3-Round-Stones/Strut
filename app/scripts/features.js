@@ -4,6 +4,7 @@ define([
 	'strut/themes/main',
 	'strut/editor/main',
 	'strut/presentation_generator/impress/main',
+	'strut/presentation_generator/main',
 	'strut/slide_editor/main',
 	'strut/transition_editor/main',
 	'strut/slide_components/main',
