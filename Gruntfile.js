@@ -235,6 +235,7 @@ module.exports = function (grunt) {
                         '!**/league_gothic_license',
                         '!**/*.ttf',
                         '!**/*.eot',
+                        'scripts/libs/require.js',
                         'zip/**'
                     ]
                 },
