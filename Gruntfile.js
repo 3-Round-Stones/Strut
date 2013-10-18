@@ -231,10 +231,11 @@ module.exports = function (grunt) {
                     src: [
                         '.htaccess',
                         'empty.html',
-                        'preview_export/css/**',
+                        'preview_export/**',
                         '!**/league_gothic_license',
                         '!**/*.ttf',
                         '!**/*.eot',
+                        '!**/*.swf',
                         'scripts/libs/require.js',
                         'zip/**'
                     ]
