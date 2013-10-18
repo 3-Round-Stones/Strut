@@ -72,16 +72,6 @@ function(SlideEditorModel, SlideEditorView, ModeButton, Button) {
 					id: 'slide-editor'
 				}
 			}, service);
-
-			registry.register({
-				interfaces: 'strut.ThemeProvider',
-				meta: {
-					modes: {
-						'slide-editor': true
-					},
-					overflow: true
-				},
-			}, markdownProviderFactory)
 		}
 	};
 });
