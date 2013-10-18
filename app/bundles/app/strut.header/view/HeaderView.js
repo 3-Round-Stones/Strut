@@ -1,13 +1,16 @@
 define(['libs/backbone',
+		'strut/presentation_generator/view/PreviewButton',
 		'./ThemeProviderView',
 		'./Tablets',
 		'css!styles/header/header.css'],
-function(Backbone, ThemeProviderView, Tablets, empty) {
+function(Backbone, PreviewButton, ThemeProviderView, Tablets, empty) {
 	return Backbone.View.extend({
 		className: 'row-fluid header',
 
 		initialize: function() {
 			this._template = JST['strut.header/Header'];
+			this._previewButton = 
+				new PreviewButton({editorModel: this.model.editorModel()});
 			this._themeProviderView = new ThemeProviderView(this.model.editorModel());
 
 			this.model.editorModel().on('change:activeMode', this._modeChanged, this);
@@ -37,6 +40,9 @@ function(Backbone, ThemeProviderView, Tablets, empty) {
 			this.model.get('createCompButtons').forEach(function(button) {
 				$createCompButtons.append(button.render().el);
 			}, this);
+
+			//var $generatorButton = this.$el.find('.preview-generator-button');
+			$modeButtons.append(this._previewButton.render().$el);
 
 			var $themeButtons = this.$el.find('.theme-buttons');
 			$themeButtons.append(this._themeProviderView.render().$el);
